@@ -1,27 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.github.luiguip</groupId>
-		<artifactId>chamber-of-deputies-adapter</artifactId>
-		<version>0.1.0-SNAPSHOT</version>
-	</parent>
+  <parent>
+    <groupId>com.github.luiguip</groupId>
+    <artifactId>chamber-of-deputies-service</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
 
-	<groupId>com.github.luiguip.chamber-of-deputies-adapter</groupId>
-	<artifactId>infrastructure</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
-	<name>infrastructure</name>
-	<description>infrastructure</description>
+  <groupId>com.github.luiguip.chamber-of-deputies-adapter</groupId>
+  <artifactId>infrastructure</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <name>infrastructure</name>
+  <description>infrastructure</description>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.github.tomakehurst</groupId>
-			<artifactId>wiremock</artifactId>
-			<version>${wiremock.version}</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web-services</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-tomcat</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.xml.bind</groupId>
+      <artifactId>jakarta.xml.bind-api</artifactId>
+      <version>${xml.bind.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-impl</artifactId>
+      <version>${xml.bind.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.tomakehurst</groupId>
+      <artifactId>wiremock</artifactId>
+      <version>${wiremock.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.jvnet.jaxb2.maven2</groupId>
+        <artifactId>maven-jaxb2-plugin</artifactId>
+        <version>0.14.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <args>
+            <arg>-XautoNameResolution</arg>
+          </args>
+          <schemaLanguage>WSDL</schemaLanguage>
+          <generatePackage>com.github.luiguip.chamber_of_deputies_adapter.infrastructure.client.deputies.wsdl
+          </generatePackage>
+          <schemas>
+            <schema>
+              <url>https://www.camara.leg.br/SitCamaraWS/Deputados.asmx?wsdl</url>
+            </schema>
+          </schemas>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
