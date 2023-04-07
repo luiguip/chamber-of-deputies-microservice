@@ -10,7 +10,7 @@
     <version>0.1.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.github.luiguip.chamber-of-deputies-adapter</groupId>
+  <groupId>com.github.luiguip.chamber-of-deputies-service</groupId>
   <artifactId>infrastructure</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <name>infrastructure</name>
@@ -45,7 +45,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
+<!--
   <build>
     <plugins>
       <plugin>
@@ -64,8 +64,9 @@
             <arg>-XautoNameResolution</arg>
           </args>
           <schemaLanguage>WSDL</schemaLanguage>
-          <generatePackage>com.github.luiguip.chamber_of_deputies_adapter.infrastructure.client.deputies.wsdl
+          <generatePackage>com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl
           </generatePackage>
+          <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
           <schemas>
             <schema>
               <url>https://www.camara.leg.br/SitCamaraWS/Deputados.asmx?wsdl</url>
@@ -75,4 +76,5 @@
       </plugin>
     </plugins>
   </build>
+  -->
 </project>
