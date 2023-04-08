@@ -8,7 +8,7 @@
   <artifactId>chamber-of-deputies-service</artifactId>
   <packaging>pom</packaging>
   <version>0.1.0-SNAPSHOT</version>
-  <name>chamber-of-deputies-adapter</name>
+  <name>chamber-of-deputies-service</name>
 
   <modules>
     <module>infrastructure</module>
@@ -21,7 +21,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
     <wiremock.version>2.26.3</wiremock.version>
-    <xml.bind.version>2.3.3</xml.bind.version>
+    <xml.bind.version>4.0.0</xml.bind.version>
   </properties>
 
   <parent>
