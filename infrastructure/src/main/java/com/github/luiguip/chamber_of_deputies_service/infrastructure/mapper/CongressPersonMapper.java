@@ -17,7 +17,8 @@ import org.w3c.dom.NodeList;
 @Mapper(componentModel = ComponentModel.SPRING)
 public interface CongressPersonMapper {
 
-  default List<CongressPerson> toDomain(ObterDeputadosResponse response) {
+  default List<CongressPerson> toDomain(ObterDeputadosResponse response)
+      throws InfrastructureException {
     var deputadosRoot = (Node) response.getObterDeputadosResult()
         .getContent()
         .stream()
