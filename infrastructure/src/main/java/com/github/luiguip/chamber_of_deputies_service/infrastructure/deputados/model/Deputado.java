@@ -1,4 +1,4 @@
-package com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.model;
+package com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.model;
 
 public class Deputado {
   private Integer ideCadastro;

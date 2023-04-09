@@ -6,4 +6,4 @@
 //
 
 @jakarta.xml.bind.annotation.XmlSchema(namespace = "https://www.camara.gov.br/SitCamaraWS/Deputados", elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl;
+package com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.model.wsdl;

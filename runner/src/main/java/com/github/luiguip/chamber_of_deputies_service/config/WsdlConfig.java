@@ -1,8 +1,8 @@
 package com.github.luiguip.chamber_of_deputies_service.config;
 
 
-import com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.client.DeputadosClient;
-import com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObjectFactory;
+import com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.client.DeputadosClient;
+import com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.model.wsdl.ObjectFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;

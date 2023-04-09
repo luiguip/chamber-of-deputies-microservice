@@ -6,7 +6,7 @@
 //
 
 
-package com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl;
+package com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.model.wsdl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="ObterLideresBancadasResult" minOccurs="0"&gt;
+ *         &lt;element name="ObterDeputadosResult" minOccurs="0"&gt;
  *           &lt;complexType&gt;
  *             &lt;complexContent&gt;
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -50,36 +50,36 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "obterLideresBancadasResult"
+    "obterDeputadosResult"
 })
-@XmlRootElement(name = "ObterLideresBancadasResponse")
-public class ObterLideresBancadasResponse {
+@XmlRootElement(name = "ObterDeputadosResponse")
+public class ObterDeputadosResponse {
 
-    @XmlElement(name = "ObterLideresBancadasResult")
-    protected ObterLideresBancadasResponse.ObterLideresBancadasResult obterLideresBancadasResult;
+    @XmlElement(name = "ObterDeputadosResult")
+    protected ObterDeputadosResponse.ObterDeputadosResult obterDeputadosResult;
 
     /**
-     * Gets the value of the obterLideresBancadasResult property.
+     * Gets the value of the obterDeputadosResult property.
      * 
      * @return
      *     possible object is
-     *     {@link ObterLideresBancadasResponse.ObterLideresBancadasResult }
+     *     {@link ObterDeputadosResponse.ObterDeputadosResult }
      *     
      */
-    public ObterLideresBancadasResponse.ObterLideresBancadasResult getObterLideresBancadasResult() {
-        return obterLideresBancadasResult;
+    public ObterDeputadosResponse.ObterDeputadosResult getObterDeputadosResult() {
+        return obterDeputadosResult;
     }
 
     /**
-     * Sets the value of the obterLideresBancadasResult property.
+     * Sets the value of the obterDeputadosResult property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ObterLideresBancadasResponse.ObterLideresBancadasResult }
+     *     {@link ObterDeputadosResponse.ObterDeputadosResult }
      *     
      */
-    public void setObterLideresBancadasResult(ObterLideresBancadasResponse.ObterLideresBancadasResult value) {
-        this.obterLideresBancadasResult = value;
+    public void setObterDeputadosResult(ObterDeputadosResponse.ObterDeputadosResult value) {
+        this.obterDeputadosResult = value;
     }
 
 
@@ -106,7 +106,7 @@ public class ObterLideresBancadasResponse {
     @XmlType(name = "", propOrder = {
         "content"
     })
-    public static class ObterLideresBancadasResult {
+    public static class ObterDeputadosResult {
 
         @XmlMixed
         @XmlAnyElement(lax = true)

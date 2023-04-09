@@ -6,7 +6,7 @@
 //
 
 
-package com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl;
+package com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.model.wsdl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="ObterPartidosBlocoCDResult" minOccurs="0"&gt;
+ *         &lt;element name="ObterPartidosCDResult" minOccurs="0"&gt;
  *           &lt;complexType&gt;
  *             &lt;complexContent&gt;
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -50,36 +50,36 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "obterPartidosBlocoCDResult"
+    "obterPartidosCDResult"
 })
-@XmlRootElement(name = "ObterPartidosBlocoCDResponse")
-public class ObterPartidosBlocoCDResponse {
+@XmlRootElement(name = "ObterPartidosCDResponse")
+public class ObterPartidosCDResponse {
 
-    @XmlElement(name = "ObterPartidosBlocoCDResult")
-    protected ObterPartidosBlocoCDResponse.ObterPartidosBlocoCDResult obterPartidosBlocoCDResult;
+    @XmlElement(name = "ObterPartidosCDResult")
+    protected ObterPartidosCDResponse.ObterPartidosCDResult obterPartidosCDResult;
 
     /**
-     * Gets the value of the obterPartidosBlocoCDResult property.
+     * Gets the value of the obterPartidosCDResult property.
      * 
      * @return
      *     possible object is
-     *     {@link ObterPartidosBlocoCDResponse.ObterPartidosBlocoCDResult }
+     *     {@link ObterPartidosCDResponse.ObterPartidosCDResult }
      *     
      */
-    public ObterPartidosBlocoCDResponse.ObterPartidosBlocoCDResult getObterPartidosBlocoCDResult() {
-        return obterPartidosBlocoCDResult;
+    public ObterPartidosCDResponse.ObterPartidosCDResult getObterPartidosCDResult() {
+        return obterPartidosCDResult;
     }
 
     /**
-     * Sets the value of the obterPartidosBlocoCDResult property.
+     * Sets the value of the obterPartidosCDResult property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ObterPartidosBlocoCDResponse.ObterPartidosBlocoCDResult }
+     *     {@link ObterPartidosCDResponse.ObterPartidosCDResult }
      *     
      */
-    public void setObterPartidosBlocoCDResult(ObterPartidosBlocoCDResponse.ObterPartidosBlocoCDResult value) {
-        this.obterPartidosBlocoCDResult = value;
+    public void setObterPartidosCDResult(ObterPartidosCDResponse.ObterPartidosCDResult value) {
+        this.obterPartidosCDResult = value;
     }
 
 
@@ -106,7 +106,7 @@ public class ObterPartidosBlocoCDResponse {
     @XmlType(name = "", propOrder = {
         "content"
     })
-    public static class ObterPartidosBlocoCDResult {
+    public static class ObterPartidosCDResult {
 
         @XmlMixed
         @XmlAnyElement(lax = true)

@@ -63,7 +63,7 @@
             <arg>-XautoNameResolution</arg>
           </args>
           <schemaLanguage>WSDL</schemaLanguage>
-          <generatePackage>com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl
+          <generatePackage>com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.model.wsdl
           </generatePackage>
           <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
           <schemas>

@@ -14,79 +14,79 @@ Generated on: 2023.04.07 at 10:41:04 AM BRT
             
         <schemaBindings map="false">
                   
-            <package name="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl"/>
+            <package name="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl"/>
                 
         </schemaBindings>
             
         <bindings if-exists="true" scd="tns:ObterPartidosCDResponse">
                   
-            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObterPartidosCDResponse"/>
+            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl.ObterPartidosCDResponse"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="tns:ObterPartidosBlocoCDResponse">
                   
-            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObterPartidosBlocoCDResponse"/>
+            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl.ObterPartidosBlocoCDResponse"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="tns:ObterLideresBancadasResponse">
                   
-            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObterLideresBancadasResponse"/>
+            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl.ObterLideresBancadasResponse"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="tns:ObterIdCadastroOrcamentoResponse">
                   
-            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObterIdCadastroOrcamentoResponse"/>
+            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl.ObterIdCadastroOrcamentoResponse"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="tns:ObterDetalhesDeputadoResponse">
                   
-            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObterDetalhesDeputadoResponse"/>
+            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl.ObterDetalhesDeputadoResponse"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="tns:ObterDeputadosResponse">
                   
-            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObterDeputadosResponse"/>
+            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl.ObterDeputadosResponse"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="tns:ObterPartidosCD">
                   
-            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObterPartidosCD"/>
+            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl.ObterPartidosCD"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="tns:ObterPartidosBlocoCD">
                   
-            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObterPartidosBlocoCD"/>
+            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl.ObterPartidosBlocoCD"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="tns:ObterLideresBancadas">
                   
-            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObterLideresBancadas"/>
+            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl.ObterLideresBancadas"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="tns:ObterIdCadastroOrcamento">
                   
-            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObterIdCadastroOrcamento"/>
+            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl.ObterIdCadastroOrcamento"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="tns:ObterDetalhesDeputado">
                   
-            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObterDetalhesDeputado"/>
+            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl.ObterDetalhesDeputado"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="tns:ObterDeputados">
                   
-            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl.ObterDeputados"/>
+            <class ref="com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.wsdl.ObterDeputados"/>
                 
         </bindings>
           

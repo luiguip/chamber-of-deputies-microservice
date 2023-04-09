@@ -6,7 +6,7 @@
 //
 
 
-package com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl;
+package com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.model.wsdl;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -24,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="ideCadastro" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="idBloco" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="numLegislatura" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -36,37 +36,37 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "ideCadastro",
+    "idBloco",
     "numLegislatura"
 })
-@XmlRootElement(name = "ObterDetalhesDeputado")
-public class ObterDetalhesDeputado {
+@XmlRootElement(name = "ObterPartidosBlocoCD")
+public class ObterPartidosBlocoCD {
 
-    protected String ideCadastro;
+    protected String idBloco;
     protected String numLegislatura;
 
     /**
-     * Gets the value of the ideCadastro property.
+     * Gets the value of the idBloco property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getIdeCadastro() {
-        return ideCadastro;
+    public String getIdBloco() {
+        return idBloco;
     }
 
     /**
-     * Sets the value of the ideCadastro property.
+     * Sets the value of the idBloco property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setIdeCadastro(String value) {
-        this.ideCadastro = value;
+    public void setIdBloco(String value) {
+        this.idBloco = value;
     }
 
     /**

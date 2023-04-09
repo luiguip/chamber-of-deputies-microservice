@@ -6,7 +6,7 @@
 //
 
 
-package com.github.luiguip.chamber_of_deputies_service.infrastructure.deputies.wsdl;
+package com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.model.wsdl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="ObterDetalhesDeputadoResult" minOccurs="0"&gt;
+ *         &lt;element name="ObterIdCadastroOrcamentoResult" minOccurs="0"&gt;
  *           &lt;complexType&gt;
  *             &lt;complexContent&gt;
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -50,36 +50,36 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "obterDetalhesDeputadoResult"
+    "obterIdCadastroOrcamentoResult"
 })
-@XmlRootElement(name = "ObterDetalhesDeputadoResponse")
-public class ObterDetalhesDeputadoResponse {
+@XmlRootElement(name = "ObterIdCadastroOrcamentoResponse")
+public class ObterIdCadastroOrcamentoResponse {
 
-    @XmlElement(name = "ObterDetalhesDeputadoResult")
-    protected ObterDetalhesDeputadoResponse.ObterDetalhesDeputadoResult obterDetalhesDeputadoResult;
+    @XmlElement(name = "ObterIdCadastroOrcamentoResult")
+    protected ObterIdCadastroOrcamentoResponse.ObterIdCadastroOrcamentoResult obterIdCadastroOrcamentoResult;
 
     /**
-     * Gets the value of the obterDetalhesDeputadoResult property.
+     * Gets the value of the obterIdCadastroOrcamentoResult property.
      * 
      * @return
      *     possible object is
-     *     {@link ObterDetalhesDeputadoResponse.ObterDetalhesDeputadoResult }
+     *     {@link ObterIdCadastroOrcamentoResponse.ObterIdCadastroOrcamentoResult }
      *     
      */
-    public ObterDetalhesDeputadoResponse.ObterDetalhesDeputadoResult getObterDetalhesDeputadoResult() {
-        return obterDetalhesDeputadoResult;
+    public ObterIdCadastroOrcamentoResponse.ObterIdCadastroOrcamentoResult getObterIdCadastroOrcamentoResult() {
+        return obterIdCadastroOrcamentoResult;
     }
 
     /**
-     * Sets the value of the obterDetalhesDeputadoResult property.
+     * Sets the value of the obterIdCadastroOrcamentoResult property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ObterDetalhesDeputadoResponse.ObterDetalhesDeputadoResult }
+     *     {@link ObterIdCadastroOrcamentoResponse.ObterIdCadastroOrcamentoResult }
      *     
      */
-    public void setObterDetalhesDeputadoResult(ObterDetalhesDeputadoResponse.ObterDetalhesDeputadoResult value) {
-        this.obterDetalhesDeputadoResult = value;
+    public void setObterIdCadastroOrcamentoResult(ObterIdCadastroOrcamentoResponse.ObterIdCadastroOrcamentoResult value) {
+        this.obterIdCadastroOrcamentoResult = value;
     }
 
 
@@ -106,7 +106,7 @@ public class ObterDetalhesDeputadoResponse {
     @XmlType(name = "", propOrder = {
         "content"
     })
-    public static class ObterDetalhesDeputadoResult {
+    public static class ObterIdCadastroOrcamentoResult {
 
         @XmlMixed
         @XmlAnyElement(lax = true)
