@@ -1,23 +1,23 @@
 package com.github.luiguip.chamber_of_deputies_service.infrastructure.adapter;
 
 import com.github.luiguip.chamber_of_deputies_service.domain.exception.InfrastructureException;
-import com.github.luiguip.chamber_of_deputies_service.domain.model.CongressPerson;
-import com.github.luiguip.chamber_of_deputies_service.domain.port.infrastructure.CongressPersonPort;
+import com.github.luiguip.chamber_of_deputies_service.domain.model.Deputy;
+import com.github.luiguip.chamber_of_deputies_service.domain.port.infrastructure.DeputyPort;
 import com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.client.DeputadosClient;
-import com.github.luiguip.chamber_of_deputies_service.infrastructure.mapper.CongressPersonMapper;
+import com.github.luiguip.chamber_of_deputies_service.infrastructure.mapper.DeputyMapper;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class CongressPersonAdapter implements CongressPersonPort {
+public class DeputyAdapter implements DeputyPort {
 
   private final DeputadosClient client;
 
-  private final CongressPersonMapper mapper;
+  private final DeputyMapper mapper;
 
-  public List<CongressPerson> findAll() throws InfrastructureException {
+  public List<Deputy> findAll() throws InfrastructureException {
     try {
       var response = client.findDeputados();
       return mapper.toDomain(response);

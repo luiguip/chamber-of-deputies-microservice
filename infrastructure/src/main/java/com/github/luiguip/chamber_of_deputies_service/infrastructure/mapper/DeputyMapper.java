@@ -1,7 +1,7 @@
 package com.github.luiguip.chamber_of_deputies_service.infrastructure.mapper;
 
 import com.github.luiguip.chamber_of_deputies_service.domain.exception.InfrastructureException;
-import com.github.luiguip.chamber_of_deputies_service.domain.model.CongressPerson;
+import com.github.luiguip.chamber_of_deputies_service.domain.model.Deputy;
 import com.github.luiguip.chamber_of_deputies_service.domain.model.Person;
 import com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.model.wsdl.ObterDeputadosResponse;
 import java.util.List;
@@ -15,9 +15,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 @Mapper(componentModel = ComponentModel.SPRING)
-public interface CongressPersonMapper {
+public interface DeputyMapper {
 
-  default List<CongressPerson> toDomain(ObterDeputadosResponse response)
+  default List<Deputy> toDomain(ObterDeputadosResponse response)
       throws InfrastructureException {
     var deputadosRoot = (Node) response.getObterDeputadosResult()
         .getContent()
@@ -28,14 +28,14 @@ public interface CongressPersonMapper {
     return toDomain(deputadosNodes);
   }
 
-  private List<CongressPerson> toDomain(NodeList deputadosNodes) {
+  private List<Deputy> toDomain(NodeList deputadosNodes) {
     return IntStream.range(0, deputadosNodes.getLength())
         .mapToObj(deputadosNodes::item)
         .map(this::toDomain)
         .toList();
   }
 
-  private CongressPerson toDomain(Node node) {
+  private Deputy toDomain(Node node) {
     var nodeFields = node.getChildNodes();
     var fields = IntStream.range(0, nodeFields.getLength())
         .mapToObj(nodeFields::item)
@@ -58,7 +58,7 @@ public interface CongressPersonMapper {
     return Optional.of(Map.entry(key, value));
   }
 
-  private CongressPerson toDomain(Map<String, String> fields) {
+  private Deputy toDomain(Map<String, String> fields) {
     var name = fields.get("nome");
     var sex = fields.get("sexo");
     var phone = fields.get("fone");
@@ -68,6 +68,6 @@ public interface CongressPersonMapper {
     var id = Long.valueOf(fields.get("ideCadastro"));
     var uf = fields.get("uf");
     var politicalParty = fields.get("partido");
-    return new CongressPerson(id, person, uf, politicalParty);
+    return new Deputy(id, person, uf, politicalParty);
   }
 }
