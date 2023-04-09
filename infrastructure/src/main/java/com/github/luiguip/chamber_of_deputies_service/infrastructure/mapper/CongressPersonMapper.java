@@ -1,5 +1,6 @@
 package com.github.luiguip.chamber_of_deputies_service.infrastructure.mapper;
 
+import com.github.luiguip.chamber_of_deputies_service.domain.exception.InfrastructureException;
 import com.github.luiguip.chamber_of_deputies_service.domain.model.CongressPerson;
 import com.github.luiguip.chamber_of_deputies_service.domain.model.Person;
 import com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.model.wsdl.ObterDeputadosResponse;
@@ -17,9 +18,12 @@ import org.w3c.dom.NodeList;
 public interface CongressPersonMapper {
 
   default List<CongressPerson> toDomain(ObterDeputadosResponse response) {
-    var content = response.getObterDeputadosResult().getContent();
-    var deputadosNode = (Node) content.stream().findFirst().orElseThrow();
-    var deputadosNodes = deputadosNode.getChildNodes();
+    var deputadosRoot = (Node) response.getObterDeputadosResult()
+        .getContent()
+        .stream()
+        .findFirst()
+        .orElseThrow(() -> new InfrastructureException("ObterDeputadosResult content can't be empty"));
+    var deputadosNodes = deputadosRoot.getChildNodes();
     return toDomain(deputadosNodes);
   }
 
