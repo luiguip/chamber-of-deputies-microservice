@@ -10,20 +10,20 @@ import org.springframework.ws.soap.SoapMessage;
 
 @Slf4j
 @RequiredArgsConstructor
-  public class  DeputadosClient extends WebServiceGatewaySupport {
+public class DeputadosClient extends WebServiceGatewaySupport {
 
   private final ObjectFactory objectFactory;
 
-  public ObterDeputadosResponse findDeputies() {
+  public ObterDeputadosResponse findDeputados() {
 
     ObterDeputados request = objectFactory.createObterDeputados();
 
     log.info("Request all deputies");
 
-
     return (ObterDeputadosResponse) getWebServiceTemplate()
         .marshalSendAndReceive(request, message ->
-            ((SoapMessage) message).setSoapAction("https://www.camara.gov.br/SitCamaraWS/Deputados/ObterDeputados"));
+            ((SoapMessage) message).setSoapAction(
+                "https://www.camara.gov.br/SitCamaraWS/Deputados/ObterDeputados"));
   }
 
 }

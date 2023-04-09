@@ -13,6 +13,7 @@
   <modules>
     <module>infrastructure</module>
     <module>runner</module>
+    <module>domain</module>
   </modules>
 
   <properties>
