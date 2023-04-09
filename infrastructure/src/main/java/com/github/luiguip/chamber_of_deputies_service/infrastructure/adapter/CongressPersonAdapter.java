@@ -18,8 +18,12 @@ public class CongressPersonAdapter implements CongressPersonPort {
   private final CongressPersonMapper mapper;
 
   public List<CongressPerson> findAll() throws InfrastructureException {
-    var response = client.findDeputados();
-    return mapper.toDomain(response);
+    try {
+      var response = client.findDeputados();
+      return mapper.toDomain(response);
+    } catch (RuntimeException e) {
+      throw new InfrastructureException("Unexpected adapter exception", e);
+    }
   }
 
 }

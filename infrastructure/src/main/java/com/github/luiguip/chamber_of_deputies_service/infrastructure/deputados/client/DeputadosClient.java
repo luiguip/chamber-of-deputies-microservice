@@ -28,7 +28,7 @@ public class DeputadosClient extends WebServiceGatewaySupport {
                   "https://www.camara.gov.br/SitCamaraWS/Deputados/ObterDeputados"));
     } catch (XmlMappingException | WebServiceClientException e) {
       throw new InfrastructureException(e);
-    }  catch (Exception e) {
+    }  catch (RuntimeException e) {
       throw new InfrastructureException("Unexpected client Exception", e);
     }
   }
