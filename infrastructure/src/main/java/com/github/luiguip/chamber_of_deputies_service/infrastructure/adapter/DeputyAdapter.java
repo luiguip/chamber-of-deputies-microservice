@@ -2,7 +2,7 @@ package com.github.luiguip.chamber_of_deputies_service.infrastructure.adapter;
 
 import com.github.luiguip.chamber_of_deputies_service.domain.exception.InfrastructureException;
 import com.github.luiguip.chamber_of_deputies_service.domain.model.Deputy;
-import com.github.luiguip.chamber_of_deputies_service.domain.port.infrastructure.DeputyPort;
+import com.github.luiguip.chamber_of_deputies_service.domain.port.infrastructure.DeputyInfrastructurePort;
 import com.github.luiguip.chamber_of_deputies_service.infrastructure.deputados.client.DeputadosClient;
 import com.github.luiguip.chamber_of_deputies_service.infrastructure.mapper.DeputyMapper;
 import java.util.List;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class DeputyAdapter implements DeputyPort {
+public class DeputyAdapter implements DeputyInfrastructurePort {
 
   private final DeputadosClient client;
 

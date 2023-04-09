@@ -4,7 +4,7 @@ import com.github.luiguip.chamber_of_deputies_service.domain.exception.Infrastru
 import com.github.luiguip.chamber_of_deputies_service.domain.model.Deputy;
 import java.util.List;
 
-public interface DeputyPort {
+public interface DeputyInfrastructurePort {
 
   List<Deputy> findAll() throws InfrastructureException;
 }
