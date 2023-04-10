@@ -24,6 +24,7 @@
     <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
     <wiremock.version>2.26.3</wiremock.version>
     <xml.bind.version>4.0.0</xml.bind.version>
+    <service.version>0.1.0-SNAPSHOT</service.version>
   </properties>
 
   <parent>

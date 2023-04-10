@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>runner</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1.0-SNAPSHOT</version>
   <name>runner</name>
   <description>runner</description>
 
@@ -18,7 +18,19 @@
     <dependency>
       <groupId>com.github.luiguip</groupId>
       <artifactId>infrastructure</artifactId>
-      <version>0.1.0-SNAPSHOT</version>
+      <version>${service.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.luiguip</groupId>
+      <artifactId>domain</artifactId>
+      <version>${service.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.luiguip</groupId>
+      <artifactId>application</artifactId>
+      <version>${service.version}</version>
     </dependency>
 
     <dependency>
