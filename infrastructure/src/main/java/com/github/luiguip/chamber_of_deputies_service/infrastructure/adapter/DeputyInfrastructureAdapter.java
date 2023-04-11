@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class DeputyAdapter implements DeputyInfrastructurePort {
+public class DeputyInfrastructureAdapter implements DeputyInfrastructurePort {
 
   private final DeputadosClient client;
 

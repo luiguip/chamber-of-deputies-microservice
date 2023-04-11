@@ -5,10 +5,9 @@ import com.github.luiguip.chamber_of_deputies_service.domain.model.Deputy;
 import java.util.List;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants.ComponentModel;
-import org.mapstruct.factory.Mappers;
 
 @Mapper(componentModel = ComponentModel.SPRING)
-public interface DeputyMapper {
+public interface DeputyDtoMapper {
 
   DeputyDto toDto(Deputy deputy);
 
