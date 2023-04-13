@@ -25,6 +25,7 @@
     <wiremock.version>2.26.3</wiremock.version>
     <xml.bind.version>4.0.0</xml.bind.version>
     <service.version>0.1.0-SNAPSHOT</service.version>
+    <org.springdoc.version>2.1.0</org.springdoc.version>
   </properties>
 
   <parent>
@@ -49,6 +50,17 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      <version>${org.springdoc.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+      <version>${org.springdoc.version}</version>
     </dependency>
   </dependencies>
 
